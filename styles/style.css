@@ -11,19 +11,23 @@
 */
 
 .page {
-  background-image: var(--page-bg);
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
+  background-image: var(--page-bg);
   font-family: var(--font-main), Arial, sans-serif;
   font-variation-settings: "wght" var(--font-weight-text);
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  min-height: max(100vh, 667px);
 }
 
 .header {
   font-family: var(--font-accent);
-  min-height: max(100vh, 667px);
   padding-top: 100px;
   padding-bottom: 100px;
+
 }
 
 .header__contain {
@@ -46,4 +50,75 @@
   background-color: white;
   width: clamp(280px, 100vw, 1200px);
   border: solid 2px black;
+}
+
+
+
+.cards {
+width: clamp(280px, 100vw, 1200px);
+display: grid;
+gap: 50px;
+background-color: white;
+}
+
+.img__car {
+position: relative;
+  overflow: hidden;
+}
+
+.card__label {
+      display: block;
+  font-family: var(--font-accent);
+  position: absolute;
+  top: 27px;
+  right: 25px;
+font-size: 14px;
+}
+
+@supports (-webkit-text-stroke: 1px var(--text-stroke)) {
+  .card__label {
+    -webkit-text-stroke: 0.3px var(--text-stroke);
+    color: rgb(0, 0, 0);
+     mix-blend-mode: hard-light;
+  }
+}
+
+.main__elements {
+ font-family: var(--font-main);
+  font-size: 18px;
+  font-weight: var(--font-weight-title);
+  padding: 4px 10px;
+}
+
+.main__text {
+  padding: 25px;
+}
+
+
+.main__memory {
+  padding: 0px 25px 25px 25px;
+}
+
+.like-icon {
+ display: flex;
+ margin-left: auto;
+ margin-bottom: 25px;
+}
+
+
+.button__save {
+  display: grid;
+  font-family: var(--font-accent);
+  background-color: rgba(255, 255, 255, 1);
+  border: 2px solid rgb(0, 0, 0);
+height: 84px;
+width: 306px;
+       margin: 0 auto;
+       margin-bottom: 100px;
+}
+
+.header__html{
+display: flex;
+font-size: 14px;
+justify-content: center;
 }

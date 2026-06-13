@@ -2,6 +2,7 @@
 :root {
   --font-main: "Inter", sans-serif;
   --font-accent: "Press Start 2P", cursive;
+  --text-stroke:rgba(255, 255, 255, 1);
   --font-weight-text: 410;
   --font-weight-title: 715;
   --page-bg:
