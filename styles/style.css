@@ -27,7 +27,6 @@
   font-family: var(--font-accent);
   padding-top: 100px;
   padding-bottom: 100px;
-
 }
 
 .header__contain {
@@ -52,39 +51,75 @@
   border: solid 2px black;
 }
 
-
-
-.cards {
-width: clamp(280px, 100vw, 1200px);
-display: grid;
-gap: 50px;
-background-color: white;
+.img__car__contain {
+  position: relative;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
 }
 
 .img__car {
-position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.card:nth-of-type(2) .img__car {
+  filter: grayscale(75%);
+}
+
+.card:nth-of-type(3) .img__car {
+  filter: saturate(200%);
+}
+
+.card:nth-of-type(4) .img__car {
+  filter: hue-rotate(20deg);
+}
+
+.card:nth-of-type(5) .img__car {
+  filter: invert(80%);
+}
+
+.card:nth-of-type(6) .img__car {
+  filter: sepia(90%);
+}
+
+.card:nth-of-type(7) .img__car {
+  filter: blur(5px);
+}
+
+.card:nth-of-type(8) .img__car {
+  filter: invert(30%) hue-rotate(99deg) saturate(143%);
+}
+
+.cards {
+  width: clamp(280px, 100vw, 1200px);
+  display: grid;
+  gap: 50px;
+  background-color: white;
+}
+
+.img__car {
   overflow: hidden;
 }
 
 .card__label {
-      display: block;
   font-family: var(--font-accent);
   position: absolute;
   top: 27px;
   right: 25px;
-font-size: 14px;
+  font-size: 14px;
 }
 
 @supports (-webkit-text-stroke: 1px var(--text-stroke)) {
   .card__label {
     -webkit-text-stroke: 0.3px var(--text-stroke);
     color: rgb(0, 0, 0);
-     mix-blend-mode: hard-light;
+    mix-blend-mode: hard-light;
   }
 }
 
 .main__elements {
- font-family: var(--font-main);
+  font-family: var(--font-main);
   font-size: 18px;
   font-weight: var(--font-weight-title);
   padding: 4px 10px;
@@ -94,31 +129,101 @@ font-size: 14px;
   padding: 25px;
 }
 
-
 .main__memory {
   padding: 0px 25px 25px 25px;
 }
 
 .like-icon {
- display: flex;
- margin-left: auto;
- margin-bottom: 25px;
+  display: flex;
+  margin-left: auto;
+  margin-bottom: 25px;
+  background-color: white;
+  width: 130px;
+  height: 38px;
+  margin-right: 25px;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-accent);
+  font-size: 14px;
 }
-
 
 .button__save {
   display: grid;
+  
   font-family: var(--font-accent);
   background-color: rgba(255, 255, 255, 1);
   border: 2px solid rgb(0, 0, 0);
-height: 84px;
-width: 306px;
-       margin: 0 auto;
-       margin-bottom: 100px;
+  height: 84px;
+  width: 306px;
+  margin: 0 auto;
+  margin-bottom: 100px;
 }
 
-.header__html{
+.header__html {
+  display: flex;
+  font-size: 14px;
+  justify-content: center;
+}
+
+.card__save-icon{
+  margin-top: 17px;
+      justify-self: center;
+width: 28px;
+height: 28px;
+}
+
+.card__save-okno{
+margin-left: 12px;
+    margin-top: 9px;
+    width: 40px;
+    height: 41px;
+}
+
+.button__text{
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.okno__text{
+      margin-top: 5px;
+    transform: scaleX(0.87);
+    line-height: 125%;
+    margin-left: 5px;
+    width: 242px;
+    font-size: 12px;
+    font-family: var(--font-accent);
+    display: flex;
+    flex-direction: column;
+}
+
+.okno__button{
+  font-size: 13px;
+  font-family: var(--font-accent);
+    margin-left: 13px;
+    border: solid 2px #000;
+    width: 194px;
+    height: 29px;
+    margin-top: 24px;
+}
+
+.okno__contain{
+ display: none;
+  height: 143px;
+    width: 255px;
+background-color: white;
+}
+
+.okno__contain[open] {
+  display: block;
+}
+
+.okno__contain::backdrop {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.okno__contain__save{
 display: flex;
-font-size: 14px;
-justify-content: center;
+}
+
+@media (width <= 375px){
+  
 }
