@@ -18,37 +18,43 @@
   background-image: var(--page-bg);
   font-family: var(--font-main), Arial, sans-serif;
   font-variation-settings: "wght" var(--font-weight-text);
-  min-inline-size: 320px;
-  min-block-size: 100dvb;
-  min-height: max(100vh, 667px);
+  min-height: max(100vh, 960px);
 }
 
 .header {
+  background-position: center;
+  min-height: max(100vh, 368px);
   font-family: var(--font-accent);
   padding-top: 100px;
-  padding-bottom: 100px;
 }
 
 .header__contain {
-  width: clamp(280px, 100vw, 1200px);
+  max-width: 700px;
+  margin: 0 auto;
   border: solid 2px black;
   padding-top: clamp(122px, 8vw, 130px);
   text-align: center;
   background-color: white;
+  box-sizing: border-box;
 }
 
 .header__html {
+  display: flex;
+  font-size: clamp(49px, 2.21vw + 40.7px, 65px);
+  justify-content: center;
   margin-bottom: 20px;
 }
 
 .header__text {
+  font-size: 23px;
   margin-bottom: clamp(122px, 8vw, 130px);
 }
 
 .card {
   background-color: white;
-  width: clamp(280px, 100vw, 1200px);
+  max-width: 700px;
   border: solid 2px black;
+  margin: 0 auto;
 }
 
 .img__car__contain {
@@ -92,10 +98,11 @@
 }
 
 .cards {
-  width: clamp(280px, 100vw, 1200px);
+  background-image: linear-gradient(to bottom, #00000000 1% 5%, white 150px);
+  background-color: transparent;
+  margin: 0 auto;
   display: grid;
   gap: 50px;
-  background-color: white;
 }
 
 .img__car {
@@ -144,73 +151,67 @@
   justify-content: center;
   align-items: center;
   font-family: var(--font-accent);
-  font-size: 14px;
+  font-size: clamp(49px, 2.21vw + 40.7px, 65px);
 }
 
 .button__save {
-  display: grid;
-  
+  align-items: center;
+  display: flex;
   font-family: var(--font-accent);
   background-color: rgba(255, 255, 255, 1);
   border: 2px solid rgb(0, 0, 0);
-  height: 84px;
-  width: 306px;
+  height: 55px;
+  width: 335px;
   margin: 0 auto;
   margin-bottom: 100px;
 }
 
-.header__html {
-  display: flex;
-  font-size: 14px;
-  justify-content: center;
+.card__save-icon {
+  margin: 17px 3.5px 17px 20px;
+  justify-self: center;
+  width: 21px;
+  height: 21px;
 }
 
-.card__save-icon{
-  margin-top: 17px;
-      justify-self: center;
-width: 28px;
-height: 28px;
+.card__save-okno {
+  margin-left: 12px;
+  margin-top: 22px;
+  width: 40px;
+  height: 41px;
 }
 
-.card__save-okno{
-margin-left: 12px;
-    margin-top: 9px;
-    width: 40px;
-    height: 41px;
-}
-
-.button__text{
+.button__text {
   font-size: 14px;
   white-space: nowrap;
 }
 
-.okno__text{
-      margin-top: 5px;
-    transform: scaleX(0.87);
-    line-height: 125%;
-    margin-left: 5px;
-    width: 242px;
-    font-size: 12px;
-    font-family: var(--font-accent);
-    display: flex;
-    flex-direction: column;
+.okno__text {
+  margin-top: 13px;
+  transform: scaleX(0.81);
+  line-height: 117%;
+  margin-left: -5px;
+  width: 242px;
+  font-size: 17px;
+  font-family: var(--font-accent);
+  display: flex;
+  flex-direction: column;
 }
 
-.okno__button{
+.okno__button {
   font-size: 13px;
   font-family: var(--font-accent);
-    margin-left: 13px;
-    border: solid 2px #000;
-    width: 194px;
-    height: 29px;
-    margin-top: 24px;
+  margin-left: 12px;
+  border: solid 2px #000;
+  width: 290px;
+  height: 37px;
+  margin-top: 20px;
 }
 
-.okno__contain{
- display: none;
-  height: 143px;
-    width: 255px;
-background-color: white;
+.okno__contain {
+  display: none;
+  height: 191px;
+  width: 353px;
+  background-color: white;
 }
 
 .okno__contain[open] {
@@ -220,10 +221,53 @@ background-color: white;
 .okno__contain::backdrop {
   background-color: rgba(0, 0, 0, 0.8);
 }
-.okno__contain__save{
-display: flex;
+.okno__contain__save {
+  display: flex;
 }
 
-@media (width <= 375px){
-  
+@media (width <= 375px) {
+  .page {
+    min-height: max(100vh, 667px);
+  }
+  .header__html {
+    font-size: clamp(32px, 2.34vw + 23.2px, 49px);
+  }
+  .header__text {
+    font-size: 14px;
+  }
+  .card__save-icon {
+    margin: 17px 0px auto;
+    width: 28px;
+    height: 28px;
+  }
+
+  .button__save {
+    display: grid;
+    height: 84px;
+    width: 306px;
+    margin-bottom: 100px;
+  }
+  .okno__contain {
+    height: 143px;
+    width: 255px;
+  }
+  .okno__button {
+    width: 194px;
+    height: 29px;
+    margin-top: 24px;
+  }
+  .okno__text {
+    margin-top: 5px;
+    transform: scaleX(0.87);
+    line-height: 125%;
+    margin-left: 5px;
+    width: 242px;
+    font-size: 12px;
+  }
+  .card__save-okno {
+    margin-left: 12px;
+    margin-top: 9px;
+    width: 40px;
+    height: 41px;
+  }
 }
