@@ -5,6 +5,11 @@
   --text-stroke: rgba(255, 255, 255, 1);
   --font-weight-text: 410;
   --font-weight-title: 715;
+  --accent-color: #000;
+  --heart-contour-color: rgb(0, 0, 0);
+  --animation-fill-color: rgb(255, 0, 0);
+  --sparks-color:rgb(255, 0, 0);
+  
   --page-bg:
     repeating-linear-gradient(
       to right,
