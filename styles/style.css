@@ -143,6 +143,8 @@ button:not(.card__icon-button):hover::before {
 }
 
 .button__text {
+  font-size: 14px;
+  white-space: nowrap;
   position: relative;
   z-index: 1;
   color: var(--text-stroke);
@@ -297,11 +299,6 @@ button:not(.card__icon-button):hover::before {
   margin-top: 22px;
   width: 40px;
   height: 41px;
-}
-
-.button__text {
-  font-size: 14px;
-  white-space: nowrap;
 }
 
 .okno__text {
