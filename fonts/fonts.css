@@ -1,22 +1,12 @@
 /* В этом файле вы импортируете все шрифты для сайта. Один из них вариативный и требует особенной настройки */
 @font-face {
-  font-display: swap;
   font-family: "Inter";
-  font-style: normal;
-  font-weight: 400;
   src:
-    local("Inter-Regular"),
-    url("../fonts/Inter/Inter-Regular.woff") format("woff");
-}
-
-@font-face {
+    url("Inter-Variable.woff2") format("woff2"),
+    url("./Inter-Variable.woff2") format("woff2-variations");
+  font-weight: 100 900;
+  font-style: normal;
   font-display: swap;
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 700;
-  src:
-    local("Inter-Bold"),
-    url("../fonts/Inter/Inter-Bold.woff") format("woff");
 }
 
 @font-face {

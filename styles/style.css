@@ -240,8 +240,6 @@ button:not(.card__icon-button):hover::before {
   animation: sparks-fade 0.3s ease-in 0.3s;
 }
 
-
-
 @supports (-webkit-text-stroke: 1px var(--text-stroke)) {
   .card__label {
     -webkit-text-stroke: 0.3px var(--text-stroke);
