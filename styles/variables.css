@@ -4,7 +4,7 @@
   --font-accent: "Press Start 2P", cursive;
   --text-stroke: rgba(255, 255, 255, 1);
   --font-weight-text: 400;
- --font-weight-title: 700;
+  --font-weight-title: 700;
   --accent-color: #000;
   --heart-contour-color: rgb(0, 0, 0);
   --animation-fill-color: rgb(255, 0, 0);
