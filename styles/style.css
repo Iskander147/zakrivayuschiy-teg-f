@@ -35,7 +35,6 @@
   padding-top: clamp(122px, 8vw, 130px);
   text-align: center;
   background-color: white;
-
 }
 
 .header__html {
@@ -345,9 +344,7 @@ button:not(.card__icon-button):hover::before {
   .page {
     min-height: max(100vh, 667px);
   }
-.header__contain{
-  padding: 20px;
-}
+
   .header__html {
     font-size: clamp(32px, 2.34vw + 23.2px, 49px);
   }
