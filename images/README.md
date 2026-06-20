@@ -1,4 +1,4 @@
-https://github.com/Iskander147/zakrivayuschiy-teg-f
+https://github.com/iskander147/zakrivayuschiy-teg-f
 ## Изображения и иконки проекта
 Все графические ресурсы проекта хранятся в папке `images/` и разделены по назначению:
 ```html
