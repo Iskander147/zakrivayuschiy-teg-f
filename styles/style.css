@@ -344,6 +344,7 @@ button:not(.card__icon-button):hover::before {
   .page {
     min-height: max(100vh, 667px);
   }
+
   .header__html {
     font-size: clamp(32px, 2.34vw + 23.2px, 49px);
   }
