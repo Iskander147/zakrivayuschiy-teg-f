@@ -20,9 +20,6 @@
   font-variation-settings: "wght" var(--font-weight-text);
   min-height: max(100vh, 960px);
 }
-.main__elements {
-  font-variation-settings: "wght" var(--font-weight-title);
-}
 
 .header {
   background-position: center;
@@ -252,8 +249,8 @@ button:not(.card__icon-button):hover::before {
 .main__elements {
   font-family: var(--font-main);
   font-size: 18px;
-  font-weight: var(--font-weight-title);
   padding: 4px 10px;
+   font-variation-settings: "wght" var(--font-weight-title);
 }
 
 .main__text {
@@ -348,7 +345,7 @@ button:not(.card__icon-button):hover::before {
 
 @media (width <= 375px) {
   .page {
-    min-height: max(100vh, 667px);
+    min-height: min(100vh, 667px);
   }
 
   .header {
