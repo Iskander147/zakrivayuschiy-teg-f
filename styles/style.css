@@ -16,7 +16,7 @@
   background-size: cover;
   background-attachment: fixed;
   background-image: var(--page-bg);
-  font-family: var(--font-main), Arial, sans-serif;
+  font-family: var(--font-main);
   font-variation-settings: "wght" var(--font-weight-text);
   min-height: max(100vh, 960px);
 }
@@ -101,7 +101,6 @@
 }
 
 .cards {
-  background-image: linear-gradient(to bottom, #00000000 1% 5%, white 150px);
   background-color: transparent;
   margin: 0 auto;
   display: grid;
@@ -250,11 +249,16 @@ button:not(.card__icon-button):hover::before {
   font-family: var(--font-main);
   font-size: 18px;
   padding: 4px 10px;
-   font-variation-settings: "wght" var(--font-weight-title);
+  font-variation-settings: "wght" var(--font-weight-title);
 }
 
 .main__text {
+  font-size: 18px;
+  line-height: 21px;
   padding: 25px;
+}
+.main__text + .main__text {
+  padding-top: 0;
 }
 
 .main__memory {
@@ -274,6 +278,7 @@ button:not(.card__icon-button):hover::before {
 }
 
 .button__save {
+  padding: 15px;
   align-items: center;
   display: flex;
   font-family: var(--font-accent);
@@ -292,7 +297,7 @@ button:not(.card__icon-button):hover::before {
   height: 21px;
   position: relative;
   z-index: 1;
-  color: var(--text-stroke);
+  filter: invert(1);
   mix-blend-mode: difference;
 }
 
@@ -327,7 +332,6 @@ button:not(.card__icon-button):hover::before {
 
 .okno__contain {
   display: none;
-  height: 191px;
   width: 353px;
   background-color: var(--text-stroke);
 }
@@ -378,7 +382,6 @@ button:not(.card__icon-button):hover::before {
     margin-bottom: 100px;
   }
   .okno__contain {
-    height: 143px;
     width: 255px;
   }
   .okno__button {
